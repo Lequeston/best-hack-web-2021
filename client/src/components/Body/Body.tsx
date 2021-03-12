@@ -4,6 +4,7 @@ import { Layout as AntLayout } from 'antd';
 import CategoryLocation from '@/components/Category-location';
 import MainCategoryList from '@components/Main-category-list';
 import ProductList from '@components/Product-list';
+import PropertyList from '@components/Property-list';
 
 import './Body.scss';
 
@@ -17,6 +18,7 @@ const Body: React.FC = () => {
       <AntLayout className='site-layout-background' style={{ padding: '24px 0' }}>
         <MainCategoryList />
         <ProductList />
+        <PropertyList />
       </AntLayout>
     </AntContent>
   );
