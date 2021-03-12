@@ -1,8 +1,8 @@
 import React from 'react';
 
-import "./Home.scss";
+import './Home.scss';
 
-const Home = () => {
+const Home: React.FC = () => {
   return <h1>this is home directory!</h1>;
 };
 
