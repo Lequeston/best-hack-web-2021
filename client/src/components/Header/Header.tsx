@@ -1,9 +1,9 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { Layout as AntLayout } from 'antd';
 
 import './Header.scss';
 
-const AntHeader = Layout.Header;
+const AntHeader = AntLayout.Header;
 
 const Header: React.FC = () => {
   return <AntHeader></AntHeader>;
