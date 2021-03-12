@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start:api": "cd api && go run index.go",
+    "start:client": "npm run start --prefix client",
+    "start": "concurrently \"npm run start:api\" \"npm run start:client\""
+  },
   "config": {
     "commitizen": {
       "path": "git-cz"
     }
   },
   "devDependencies": {
+    "concurrently": "^6.0.0",
     "git-cz": "^4.7.6"
   }
 }
