@@ -1,9 +1,16 @@
 import React from 'react';
+import { Layout as AntLayout } from 'antd';
+
+import Header from '../../components/Header';
 
 import './Home.scss';
 
 const Home: React.FC = () => {
-  return <h1>this is home directory!</h1>;
+  return (
+    <AntLayout>
+      <Header />
+    </AntLayout>
+  );
 };
 
 export default Home;
