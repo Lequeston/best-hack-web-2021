@@ -1,9 +1,9 @@
 import React from 'react';
 import { Breadcrumb as AntBreadcrumb } from 'antd';
 
-import './Breadcrumb.scss';
+import './Category-location.scss';
 
-const Breadcrumb: React.FC = () => {
+const CategoryLocation: React.FC = () => {
   return (
     <AntBreadcrumb style={{ margin: '16px 0' }}>
       <AntBreadcrumb.Item>Продукты, напитки</AntBreadcrumb.Item>
@@ -13,4 +13,4 @@ const Breadcrumb: React.FC = () => {
   );
 };
 
-export default Breadcrumb;
+export default CategoryLocation;
