@@ -1,0 +1,14 @@
+{
+  "name": "best-hack-web-2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "devDependencies": {
+    "git-cz": "^4.7.6"
+  }
+}
