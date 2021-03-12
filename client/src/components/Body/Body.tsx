@@ -4,11 +4,11 @@ import { Layout as AntLayout } from 'antd';
 import CategoryLocation from '@/components/Category-location';
 import MainCategoryList from '@components/Main-category-list';
 
-import './Content.scss';
+import './Body.scss';
 
 const AntContent = AntLayout.Content;
 
-const Content: React.FC = () => {
+const Body: React.FC = () => {
   return (
     <AntContent style={{ padding: '0 50px' }}>
       <CategoryLocation />
@@ -20,4 +20,4 @@ const Content: React.FC = () => {
   );
 };
 
-export default Content;
+export default Body;
