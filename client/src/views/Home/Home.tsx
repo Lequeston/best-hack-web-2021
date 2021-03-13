@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout as AntLayout } from 'antd';
 
 import Header from '@/components/Header';
+import CategoryLocation from '@/components/CategoryLocation';
 import Body from '@/components/Body';
 import Footer from '@/components/Footer';
 
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
   return (
     <AntLayout>
       <Header />
+      <CategoryLocation />
       <Body />
       <Footer />
     </AntLayout>
