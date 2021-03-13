@@ -1,10 +1,10 @@
 import React from 'react';
 import { Layout as AntLayout } from 'antd';
 
-import CategoryLocation from '@/components/Category-location';
-import MainCategoryList from '@components/Main-category-list';
-import ProductList from '@components/Product-list';
-import PropertyList from '@components/Property-list';
+import CategoryLocation from '@/components/CategoryLocation';
+import MainCategoryList from '@/components/MainCategoryList';
+import ProductList from '@/components/ProductList';
+import PropertyList from '@/components/PropertyList';
 
 import './Body.scss';
 

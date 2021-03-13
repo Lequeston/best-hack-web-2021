@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout as AntLayout } from 'antd';
 
-import './Product-list.scss';
+import './ProductList.scss';
 
 const AntContent = AntLayout.Content;
 
