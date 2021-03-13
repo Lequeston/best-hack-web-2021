@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout as AntLayout, Menu as AntMenu } from 'antd';
 
-import './Property-list.scss';
+import './PropertyList.scss';
 
 const AntSider = AntLayout.Sider;
 const AntSubMenu = AntMenu.SubMenu;

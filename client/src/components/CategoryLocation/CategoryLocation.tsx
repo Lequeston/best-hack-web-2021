@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb as AntBreadcrumb } from 'antd';
 
-import './Category-location.scss';
+import './CategoryLocation.scss';
 
 const CategoryLocation: React.FC = () => {
   return (
