@@ -5,7 +5,7 @@
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development MODE_ENV=build webpack --config config/webpack.config.js",
     "build:production": "cross-env NODE_ENV=production MODE_ENV=build webpack --config config/webpack.config.js",
-    "start": "cross-env NODE_ENV=development MODE_ENV=start webpack-dev-server --config config/webpack.config.js --open",
+    "start": "cross-env NODE_ENV=development MODE_ENV=start webpack-dev-server --config config/webpack.config.js",
     "lint:print": "eslint ./src",
     "lint:fix": "eslint --fix ./src"
   },
@@ -16,8 +16,7 @@
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:fix",
-      "git add ."
+      "npm run lint:fix"
     ]
   },
   "devDependencies": {
@@ -68,6 +67,7 @@
     "antd": "^4.13.1",
     "babel-polyfill": "^6.26.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   }
 }
