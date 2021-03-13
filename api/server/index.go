@@ -4,9 +4,11 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"strconv"
 
+	"github.com/Lequeston/best-hack-web-2021/htmlparser"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 )
@@ -42,10 +44,11 @@ func initRouter() (router *mux.Router){
 	r := mux.NewRouter()
 	router = r.PathPrefix("/api").Subrouter()
 
-	test := func(w http.ResponseWriter, r *http.Request) {
-		io.WriteString(w, "Hello, I am work")
+	search := func(w http.ResponseWriter, r *http.Request) {
+		searchWord := r.FormValue("search")
+		io.WriteString(w, htmlparser.Parse("https://www.wildberries.ru/catalog/0/search.aspx?search=" + url.QueryEscape(searchWord)))
 	}
-	router.HandleFunc("/test", test).Methods("GET")
+	router.HandleFunc("/", search).Methods("GET").Queries("search", "{search}")
 
 	return
 }

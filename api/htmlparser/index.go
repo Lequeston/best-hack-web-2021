@@ -1,24 +1,28 @@
 package htmlparser
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/gocolly/colly"
-	"github.com/PuerkitoBio/goquery"
 )
 
-func Parse(url string) {
+func parseDetailPage(url string) {
+
+}
+
+func Parse(url string) (body string){
+	log.Print(url)
 	collector := colly.NewCollector()
 	collector.OnHTML("body", func(e *colly.HTMLElement) {
-		e.DOM.Each(func (iter int, sel *goquery.Selection){
-			fmt.Println(iter)	
-		})
+		//e.DOM.Find("script").Remove()
+		body = e.Text
 	})
 	collector.OnError(func (res *colly.Response, err error) {
-		fmt.Println(err.Error())
+		log.Print("error " + err.Error())
 	})
 	collector.OnResponse(func (res *colly.Response) {
-		fmt.Println(res.StatusCode)
+		log.Print(res.StatusCode)
 	})
 	collector.Visit(url)
+	return
 }
