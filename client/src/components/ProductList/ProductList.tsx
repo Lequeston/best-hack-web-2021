@@ -1,11 +1,16 @@
 import React from 'react';
 import { Layout as AntLayout } from 'antd';
+import { View } from '@components/Body';
 
 import './ProductList.scss';
 
 const AntContent = AntLayout.Content;
 
-const ProductList: React.FC = () => {
+interface Props {
+  view: View;
+}
+
+const ProductList: React.FC<Props> = ({ view }: Props) => {
   return <AntContent style={{ padding: '0 24px' }}>Product list</AntContent>;
 };
 

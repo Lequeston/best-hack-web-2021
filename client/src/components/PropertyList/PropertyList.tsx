@@ -1,12 +1,17 @@
 import React from 'react';
 import { Layout as AntLayout, Menu as AntMenu } from 'antd';
+import { View } from '@components/Body';
 
 import './PropertyList.scss';
 
 const AntSider = AntLayout.Sider;
 const AntSubMenu = AntMenu.SubMenu;
 
-const PropertyList: React.FC = () => {
+interface Props {
+  view: View;
+}
+
+const PropertyList: React.FC<Props> = ({ view }: Props) => {
   return (
     <AntSider className='site-layout-background' reverseArrow={true} width={200}>
       <AntMenu mode='inline' defaultSelectedKeys={['1']} multiple={true} style={{ height: '100%' }}>
