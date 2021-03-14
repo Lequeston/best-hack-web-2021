@@ -34,7 +34,10 @@ const Body: React.FC<Props> = ({ heightOffset }: Props) => {
   return (
     <div ref={ref} style={{ display: 'flex', flexDirection: 'column' }}>
       <AntContent style={{ padding: '0 50px', display: 'flex', flexDirection: 'column' }}>
-        <AntLayout className='site-layout-background' style={{ padding: '24px 0' }}>
+        <AntLayout
+          className='site-layout-background'
+          style={{ padding: '24px 0', display: 'flex', flexDirection: 'row' }}
+        >
           <MainCategoryList view={view} />
           <SubCategoryList view={view} />
           <ProductList view={view} />

@@ -26,7 +26,15 @@ const PropertyList: React.FC<Props> = ({ view }: Props) => {
   }, [view]);
 
   return (
-    <AntSider className='site-layout-background' reverseArrow={true} width={isCollapsed ? 0 : 200}>
+    <AntSider
+      className='site-layout-background'
+      reverseArrow={true}
+      width={200}
+      style={{
+        display: isCollapsed ? 'none' : 'flex',
+        flexDirection: 'column'
+      }}
+    >
       <AntMenu mode='inline' defaultSelectedKeys={['1']} multiple={true} style={{ height: '100%' }}>
         <AntSubMenu title='Жирность'>
           <AntMenu.Item key='10%'>10%</AntMenu.Item>
