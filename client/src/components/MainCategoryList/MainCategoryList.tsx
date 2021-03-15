@@ -1,38 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Layout as AntLayout, Menu as AntMenu } from 'antd';
-import { View } from '@components/Body';
 
 import './MainCategoryList.scss';
 import categoryList from '../../data/categoryList.json';
 
 const AntSider = AntLayout.Sider;
 
-interface Props {
-  view: View;
-}
-
-const MainCategoryList: React.FC<Props> = ({ view }: Props) => {
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
-
-  useEffect(() => {
-    switch (view) {
-      case View.Product:
-        setIsCollapsed(true);
-        break;
-      default:
-        setIsCollapsed(false);
-        break;
-    }
-  }, [view]);
-
+const MainCategoryList: React.FC = () => {
   return (
     <AntSider
       className='site-layout-background'
       width='fit-content'
-      style={{
-        display: isCollapsed ? 'none' : 'flex',
-        flexDirection: 'column'
-      }}
+      style={{ display: 'flex', flexDirection: 'column' }}
     >
       <AntMenu mode='inline' defaultSelectedKeys={['1']} style={{ height: '100%' }}>
         {Object.keys(categoryList).map((category, key) => {

@@ -1,37 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Layout as AntLayout, Menu as AntMenu } from 'antd';
-import { View } from '@components/Body';
 
 import './PropertyList.scss';
 
 const AntSider = AntLayout.Sider;
 const AntSubMenu = AntMenu.SubMenu;
 
-interface Props {
-  view: View;
-}
-
-const PropertyList: React.FC<Props> = ({ view }: Props) => {
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(true);
-
-  useEffect(() => {
-    switch (view) {
-      case View.Product:
-        setIsCollapsed(false);
-        break;
-      default:
-        setIsCollapsed(true);
-        break;
-    }
-  }, [view]);
-
+const PropertyList: React.FC = () => {
   return (
     <AntSider
       className='site-layout-background'
       reverseArrow={true}
       width={200}
       style={{
-        display: isCollapsed ? 'none' : 'flex',
+        display: 'flex',
         flexDirection: 'column'
       }}
     >
