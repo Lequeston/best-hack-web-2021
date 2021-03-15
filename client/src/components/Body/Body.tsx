@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Layout as AntLayout } from 'antd';
 
@@ -17,34 +17,18 @@ export enum View {
   Product
 }
 
-interface Props {
-  heightOffset: number;
-}
-
-const Body: React.FC<Props> = ({ heightOffset }: Props) => {
-  const ref = useRef<HTMLDivElement>(null);
+const Body: React.FC = () => {
   const [view, setView] = useState<View>(View.MainCategory);
 
-  useEffect(() => {
-    if (ref) {
-      ref.current.style.minHeight = 'calc(100vh - ' + heightOffset + 'px)';
-    }
-  }, [heightOffset]);
-
   return (
-    <div ref={ref} style={{ display: 'flex', flexDirection: 'column' }}>
-      <AntContent style={{ padding: '0 50px', display: 'flex', flexDirection: 'column' }}>
-        <AntLayout
-          className='site-layout-background'
-          style={{ padding: '24px 0', display: 'flex', flexDirection: 'row' }}
-        >
-          <MainCategoryList view={view} />
-          <SubCategoryList view={view} />
-          <ProductList view={view} />
-          <PropertyList view={view} />
-        </AntLayout>
-      </AntContent>
-    </div>
+    <AntContent className='main-content'>
+      <AntLayout className='main-layout site-layout-background'>
+        <MainCategoryList view={view} />
+        <SubCategoryList view={view} />
+        <ProductList view={view} />
+        <PropertyList view={view} />
+      </AntLayout>
+    </AntContent>
   );
 };
 
