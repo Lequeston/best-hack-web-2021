@@ -18,7 +18,7 @@ export enum View {
 }
 
 const Body: React.FC = () => {
-  const [view, setView] = useState<View>(View.MainCategory);
+  const [view, setView] = useState<View>(View.Product);
 
   return (
     <AntContent className='main-content'>

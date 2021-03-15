@@ -8,12 +8,8 @@ const AntSider = AntLayout.Sider;
 
 const MainCategoryList: React.FC = () => {
   return (
-    <AntSider
-      className='site-layout-background'
-      width='fit-content'
-      style={{ display: 'flex', flexDirection: 'column' }}
-    >
-      <AntMenu mode='inline' defaultSelectedKeys={['1']} style={{ height: '100%' }}>
+    <AntSider className='site-layout-background main-category-list' width={'fit-content'}>
+      <AntMenu mode='inline' defaultSelectedKeys={['1']}>
         {Object.keys(categoryList).map((category, key) => {
           return <AntMenu.Item key={key}>{category}</AntMenu.Item>;
         })}

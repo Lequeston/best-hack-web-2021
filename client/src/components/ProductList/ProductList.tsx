@@ -6,17 +6,7 @@ import './ProductList.scss';
 const AntContent = AntLayout.Content;
 
 const ProductList: React.FC = () => {
-  return (
-    <AntContent
-      style={{
-        padding: '0 24px',
-        display: 'flex',
-        flexDirection: 'column'
-      }}
-    >
-      Product list
-    </AntContent>
-  );
+  return <AntContent className='product-list'>Product list</AntContent>;
 };
 
 export default ProductList;

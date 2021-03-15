@@ -6,7 +6,7 @@ import './SubCategoryList.scss';
 const AntContent = AntLayout.Content;
 
 const SubCategoryList: React.FC = () => {
-  return <AntContent style={{ padding: '0 24px' }}>Sub categories</AntContent>;
+  return <AntContent className='subcategory-list'>Sub categories</AntContent>;
 };
 
 export default SubCategoryList;

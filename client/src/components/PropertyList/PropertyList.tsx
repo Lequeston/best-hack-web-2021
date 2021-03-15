@@ -8,16 +8,8 @@ const AntSubMenu = AntMenu.SubMenu;
 
 const PropertyList: React.FC = () => {
   return (
-    <AntSider
-      className='site-layout-background'
-      reverseArrow={true}
-      width={200}
-      style={{
-        display: 'flex',
-        flexDirection: 'column'
-      }}
-    >
-      <AntMenu mode='inline' defaultSelectedKeys={['1']} multiple={true} style={{ height: '100%' }}>
+    <AntSider className='property-list site-layout-background' reverseArrow={true}>
+      <AntMenu mode='inline' defaultSelectedKeys={['1']} multiple={true}>
         <AntSubMenu title='Жирность'>
           <AntMenu.Item key='10%'>10%</AntMenu.Item>
           <AntMenu.Item key='20%'>20%</AntMenu.Item>
